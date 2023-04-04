@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang=en><!--
+    Page saved with SingleFile 
+    url: https://localhost:8083/static/invite.html 
+    saved date: Fri Mar 31 2023 15:32:13 GMT+0800 (中国标准时间)
+   --><!-- BEGIN HEAD -->
+<meta charset=utf-8>
+<title>邀请</title>
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0" name=viewport>
+<meta content name=description>
+<meta content name=author>
+<style>
+    @media screen and (-webkit-min-device-pixel-ratio:0) {}
+
+    /*!
+    * Bootstrap v3.3.2 (http://getbootstrap.com)
+    * Copyright 2011-2015 Twitter, Inc.
+    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+    */
+    /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+    html {
+        font-family: sans-serif;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%
+    }
+
+    button,
+    input {
+        margin: 0;
+        font: inherit
+    }
+
+    button {
+        overflow: visible
+    }
+
+    button {
+        -webkit-appearance: button
+    }
+
+    /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    :after,
+    :before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    html {
+        font-size: 10px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    }
+
+    body {
+        line-height: 1.42857143
+    }
+
+    button,
+    input {
+        font-family: inherit
+    }
+
+    h3 {
+        line-height: 1.1
+    }
+
+    h3 {
+        margin-top: 20px
+    }
+
+    .form-control {
+        display: block;
+        width: 100%;
+        padding: 6px 12px;
+        line-height: 1.42857143;
+        background-image: none;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+    }
+
+    .form-control:focus {
+        border-color: #66afe9;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+    }
+
+    .form-control::-webkit-input-placeholder {
+        color: #999
+    }
+
+    .form-group {
+        margin-bottom: 15px
+    }
+
+    .btn {
+        display: inline-block;
+        margin-bottom: 0;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        border-radius: 4px
+    }
+
+    .btn.active.focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn:active:focus,
+    .btn:focus {
+        outline: thin dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px
+    }
+
+    .btn.focus,
+    .btn:focus,
+    .btn:hover {
+        color: #333;
+        text-decoration: none
+    }
+
+    .btn.active,
+    .btn:active {
+        background-image: none;
+        outline: 0;
+        -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125)
+    }
+
+    .btn-success.active,
+    .btn-success.focus,
+    .btn-success:active,
+    .btn-success:focus,
+    .btn-success:hover,
+    .open>.dropdown-toggle.btn-success {
+        color: #fff;
+        background-color: #449d44;
+        border-color: #398439
+    }
+
+    .btn-success.active,
+    .btn-success:active,
+    .open>.dropdown-toggle.btn-success {
+        background-image: none
+    }
+
+    @-webkit-keyframes progress-bar-stripes {
+        from {
+            background-position: 40px 0
+        }
+
+        to {
+            background-position: 0 0
+        }
+    }
+
+    @-o-keyframes progress-bar-stripes {
+        from {
+            background-position: 40px 0
+        }
+
+        to {
+            background-position: 0 0
+        }
+    }
+
+    @keyframes progress-bar-stripes {
+        from {
+            background-position: 40px 0
+        }
+
+        to {
+            background-position: 0 0
+        }
+    }
+
+    @-ms-viewport {
+        width: device-width
+    }
+
+    .login {
+        background-color: #364150 !important
+    }
+
+    .login .content {
+        background-color: #eceef1;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        -ms-border-radius: 7px;
+        -o-border-radius: 7px;
+        border-radius: 7px;
+        width: 400px;
+        margin: 40px auto 10px auto;
+        padding: 30px;
+        padding-top: 10px;
+        overflow: hidden;
+        position: relative
+    }
+
+    .login .content h3 {
+        color: #4db3a5;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 400 !important
+    }
+
+    .login .content .login-form {
+        padding: 0px;
+        margin: 0px
+    }
+
+    .login .content .form-control {
+        background-color: #dde3ec;
+        height: 43px;
+        color: #8290a3;
+        border: 1px solid #dde3ec
+    }
+
+    .login .content .form-control:focus,
+    .login .content .form-control:active {
+        border: 1px solid #c3ccda
+    }
+
+    .login .content .form-control::-webkit-input-placeholder {
+        color: #8290a3
+    }
+
+    .login .content .form-title {
+        font-weight: 300;
+        margin-bottom: 25px
+    }
+
+    .login .content .form-actions {
+        clear: both;
+        border: 0px;
+        border-bottom: 1px solid #eee;
+        padding: 0px 30px 25px 30px;
+        margin-left: -30px;
+        margin-right: -30px
+    }
+
+    .login .content .form-actions .btn {
+        margin-top: 1px
+    }
+
+    .login .content .form-actions .btn-success {
+        font-weight: 600;
+        padding: 10px 20px !important
+    }
+
+    .login .copyright {
+        text-align: center;
+        margin: 0 auto 30px 0;
+        padding: 10px;
+        color: #7a8ca5;
+        font-size: 13px
+    }
+
+    @media (max-width:440px) {
+        .login .content {
+            width: 280px
+        }
+
+        .login .content h3 {
+            font-size: 22px
+        }
+    }
+
+    body {
+        color: #333333;
+        font-family: "Open Sans", sans-serif;
+        padding: 0px !important;
+        margin: 0px !important;
+        font-size: 13px;
+        direction: ltr
+    }
+
+    @-webkit-viewport {
+        width: device-width
+    }
+
+    @-moz-viewport {
+        width: device-width
+    }
+
+    @-ms-viewport {
+        width: device-width
+    }
+
+    @-o-viewport {
+        width: device-width
+    }
+
+    @viewport {
+        width: device-width
+    }
+
+    @-ms-viewport {
+        width: auto !important
+    }
+
+    @-webkit-keyframes mdClickEffect {
+        100% {
+            opacity: 0;
+            -webkit-transform: scale(1.5)
+        }
+    }
+
+    @-moz-keyframes mdClickEffect {
+        100% {
+            opacity: 0;
+            -moz-transform: scale(2.5)
+        }
+    }
+
+    @keyframes mdClickEffect {
+        100% {
+            opacity: 0;
+            transform: scale(2.5)
+        }
+    }
+
+    @-webkit-keyframes growCircle {
+
+        0%,
+        100% {
+            -webkit-transform: scale(0);
+            opacity: 1
+        }
+
+        70% {
+            background: #eee;
+            -webkit-transform: scale(1.25)
+        }
+    }
+
+    @-moz-keyframes growCircle {
+
+        0%,
+        100% {
+            -moz-transform: scale(0);
+            opacity: 1
+        }
+
+        70% {
+            background: #eee;
+            -moz-transform: scale(1.25)
+        }
+    }
+
+    @keyframes growCircle {
+
+        0%,
+        100% {
+            transform: scale(0);
+            opacity: 1
+        }
+
+        70% {
+            background: #eee;
+            transform: scale(1.25)
+        }
+    }
+
+    @-webkit-keyframes growCircleRadio {
+
+        0%,
+        100% {
+            -webkit-transform: scale(0);
+            opacity: 1
+        }
+
+        70% {
+            background: #eee;
+            -webkit-transform: scale(1.25)
+        }
+    }
+
+    @-moz-keyframes growCircleRadio {
+
+        0%,
+        100% {
+            -moz-transform: scale(0);
+            opacity: 1
+        }
+
+        70% {
+            background: #eee;
+            -moz-transform: scale(1.25)
+        }
+    }
+
+    @keyframes growCircleRadio {
+
+        0%,
+        100% {
+            transform: scale(0);
+            opacity: 1
+        }
+
+        70% {
+            background: #eee;
+            transform: scale(1.25)
+        }
+    }
+
+    h3 {
+        font-family: "Open Sans", sans-serif
+    }
+
+    .uppercase {
+        text-transform: uppercase !important
+    }
+
+    .btn {
+        border-width: 0;
+        font-size: 14px;
+        outline: none !important;
+        background-image: none !important;
+        filter: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        text-shadow: none
+    }
+
+    .btn.dropdown-toggle,
+    .btn-group .btn.dropdown-toggle,
+    .btn:hover,
+    .btn:disabled,
+    .btn[disabled],
+    .btn:focus,
+    .btn:active,
+    .btn.active {
+        outline: none !important;
+        background-image: none !important;
+        filter: none;
+        text-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none
+    }
+
+    .btn-success {
+        color: #fff;
+        background-color: #45B6AF;
+        border-color: #3ea49d
+    }
+
+    .btn-success:hover,
+    .btn-success:focus,
+    .btn-success:active,
+    .btn-success.active {
+        color: #fff;
+        background-color: #3b9c96;
+        border-color: #307f7a
+    }
+
+    .btn-success:active,
+    .btn-success.active {
+        background-image: none;
+        background-color: #348a84
+    }
+
+    .btn-success:active:hover,
+    .btn-success.active:hover {
+        background-color: #37918b
+    }
+
+    .form-control::-webkit-input-placeholder {
+        color: #b3b3b3
+    }
+
+    .form-control {
+        font-size: 14px;
+        font-weight: normal;
+        box-shadow: none;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+        border-radius: 4px
+    }
+
+    .form-control:focus {
+        border-color: #999;
+        outline: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none
+    }
+
+    .form-control.form-control-solid {
+        border-color: #F1F3F8
+    }
+
+    .form-control.form-control-solid:focus {
+        border-color: #e3e7f1
+    }
+
+    .form-control.form-control-solid::-webkit-input-placeholder {
+        color: #acb7be
+    }
+
+    @-webkit-keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(15px)
+        }
+
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0)
+        }
+    }
+
+    @-moz-keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            -moz-transform: translateY(15px)
+        }
+
+        100% {
+            opacity: 1;
+            -moz-transform: translateY(0)
+        }
+    }
+
+    @-o-keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            -o-transform: translateY(15px)
+        }
+
+        100% {
+            opacity: 1;
+            -o-transform: translateY(0)
+        }
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(15px)
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0)
+        }
+    }
+
+    @-webkit-keyframes bounceDelay {
+
+        0%,
+        80%,
+        100% {
+            -webkit-transform: scale(0)
+        }
+
+        40% {
+            -webkit-transform: scale(1)
+        }
+    }
+
+    @keyframes bounceDelay {
+
+        0%,
+        80%,
+        100% {
+            transform: scale(0);
+            -webkit-transform: scale(0)
+        }
+
+        40% {
+            transform: scale(1);
+            -webkit-transform: scale(1)
+        }
+    }
+
+    @keyframes input-focus {
+        0% {
+            left: 20%;
+            width: 20%
+        }
+
+        99% {
+            width: 0;
+            left: 0;
+            opacity: 1
+        }
+
+        100% {
+            opacity: 0
+        }
+    }
+
+    /*!
+    * Tab drop for Bootstrap
+    */
+    @-webkit-keyframes am-moving-dashes {
+        100% {
+            stroke-dashoffset: -31px
+        }
+    }
+
+    @keyframes am-moving-dashes {
+        100% {
+            stroke-dashoffset: -31px
+        }
+    }
+
+    @-webkit-keyframes am-pulsating {
+        0% {
+            stroke-opacity: 1;
+            stroke-width: 0px
+        }
+
+        100% {
+            stroke-opacity: 0;
+            stroke-width: 50px
+        }
+    }
+
+    @keyframes am-pulsating {
+        0% {
+            stroke-opacity: 1;
+            stroke-width: 0px
+        }
+
+        100% {
+            stroke-opacity: 0;
+            stroke-width: 50px
+        }
+    }
+
+    @-webkit-keyframes am-draw {
+        0% {
+            stroke-dashoffset: 500%
+        }
+
+        100% {
+            stroke-dashoffset: 0px
+        }
+    }
+
+    @keyframes am-draw {
+        0% {
+            stroke-dashoffset: 500%
+        }
+
+        100% {
+            stroke-dashoffset: 0px
+        }
+    }
+
+    @-webkit-keyframes am-moving-dashes {
+        100% {
+            stroke-dashoffset: -28px
+        }
+    }
+
+    @keyframes am-moving-dashes {
+        100% {
+            stroke-dashoffset: -28px
+        }
+    }
+
+    :root {
+        --jjext-color-input-bg: #f4f5f5;
+        --jjext-color-input-error-bg: #ffece8;
+        --jjext-color-input-placeholder: #86909c;
+        --jjext-color-input-text: #4e5969;
+        --jjext-color-input-icon: #f53f3f
+    }
+
+    :root {
+        --jjext-color-brand: #1e80ff;
+        --jjext-color-brand-light: #e8f3ff;
+        --jjext-color-nav-title: #86909c;
+        --jjext-color-nav-popup-bg: #ffffff;
+        --jjext-color-primary: #1d2129;
+        --jjext-color-secondary-app: #4e5969;
+        --jjext-color-thirdly: #86909c;
+        --jjext-color-hover: #1e80ff;
+        --jjext-color-hover-thirdly: #86909c;
+        --jjext-color-dropdown-text: #1e80ff;
+        --jjext-color-divider: #e5e6eb;
+        --jjext-color-main-bg: #f4f5f5;
+        --jjext-color-secondary-bg: #ffffff;
+        --jjext-color-thirdly-bg: #f4f5f5;
+        --jjext-color-hover-bg: #e8f3ff;
+        --jjext-color-comment-bg: rgba(244, 245, 245, 0.5);
+        --jjext-hover-bg: linear-gradient(90deg, rgba(232, 243, 255, 0) 0%, rgba(232, 243, 255, 0.8) 25.09%, #e8f3ff 50.16%, rgba(232, 243, 255, 0.8) 75.47%, rgba(232, 243, 255, 0) 100%);
+        --jjext-color-mask: rgba(0, 0, 0, 0.4);
+        --jjext-color-quick-nav-text: #ffffff;
+        --jjext-color-nav-bg: rgba(255, 255, 255, 0.13);
+        --jjext-color-nav-selected-border: rgba(229, 230, 235, 0.3);
+        --jjext-color-tips: #f53f3f;
+        --jjext-color-fourthly: #c9cdd4;
+        --jjext-color-shadow: rgba(0, 0, 0, 0.16);
+        --jjext-color-grey-triangle: #e5e6eb;
+        --jjext-color-icon-search: #ffffff;
+        --jjext-color-navbar-icon: #1e80ff;
+        --jjext-color-layout-dropdown-bg: rgba(232, 243, 255, 0.8);
+        --jjext-color-layout-title: #4e5969;
+        --jjext-color-layout-title-active: #1e80ff;
+        --jjext-color-layout-icon-outline: rgba(30, 128, 255, 0.5);
+        --jjext-color-layout-icon-fill: #ffffff;
+        --jjext-color-layer-gray-1-2: rgba(228, 230, 235, 0.5);
+        --jjext-color-layer-4: #ffffff;
+        --jjext-color-font-brand1-normal: #1e80ff;
+        --jjext-color-font-brand-4: #abcdff;
+        --jjext-color-font-1: #252933;
+        --jjext-color-font-2: #515767;
+        --jjext-color-font-3: #8a919f;
+        --jjext-color-font-4: #c2c8d1;
+        --jjext-color-font-white: #fff;
+        --jjext-color-layer-4-plugin: rgba(30, 128, 255, 0.05);
+        --jjext-brand-fill2-hover: rgba(30, 128, 255, 0.1);
+        --jjext-color-gray-0: #fff;
+        --jjext-color-gray-1-1: #e4e6eb;
+        --jjext-color-gray-1-2: rgba(228, 230, 235, 0.5);
+        --jjext-color-gray-1-3: #e4e6eb;
+        --jjext-color-gray-2: #f2f3f5;
+        --jjext-color-gray-3: #f7f8fa;
+        --jjext-color-background: #f2f3f5;
+        --jjext-color-layer-1: #fff;
+        --jjext-color-layer-2-1: #f7f8fa;
+        --jjext-color-layer-2-2: rgba(247, 248, 250, 0.7);
+        --jjext-color-layer-3-fill: #f2f3f5;
+        --jjext-color-layer-3-border: #e4e6eb;
+        --jjext-color-layer-4-dropdown: #fff;
+        --jjext-color-layer-5: #fff;
+        --jjext-color-brand-1-normal: #1e80ff;
+        --jjext-color-brand-2-hover: #1171ee;
+        --jjext-color-brand-3-click: #0060dd;
+        --jjext-color-brand-4-disable: #abcdff;
+        --jjext-color-brand-5-light: #eaf2ff;
+        --jjext-color-mask-1: rgba(0, 0, 0, 0.4);
+        --jjext-color-mask-2: #fff;
+        --jjext-color-mask-3: none;
+        --jjext-color-mask-6: #ffffff;
+        --jjext-color-brand-fill1-normal: rgba(30, 128, 255, 0.05);
+        --jjext-color-brand-fill2-hover: rgba(30, 128, 255, 0.1);
+        --jjext-color-brand-fill3-click: rgba(30, 128, 255, 0.2);
+        --jjext-color-brand-stroke1-normal: rgba(30, 128, 255, 0.3);
+        --jjext-color-brand-stroke2-hover: rgba(30, 128, 255, 0.45);
+        --jjext-color-brand-stroke3-click: rgba(30, 128, 255, 0.6);
+        --jjext-color-font_danger: #ff5132;
+        --jjext-color-shade-1: rgba(0, 0, 0, 0.4);
+        --jjext-color-popup: #fff;
+        --jjext-color-popover: rgba(0, 0, 0, 0.8)
+    }
+
+    .sf-hidden {
+        display: none !important
+    }
+</style>
+<!--
+<meta http-equiv=content-security-policy
+    content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:; frame-src 'self' data:;">-->
+<style>
+    img[src="data:,"],
+    source[src="data:,"] {
+        display: none !important
+    }
+</style>
+<!--<script src="https://unpkg.com/rxjs@7.8.0/dist/bundles/rxjs.umd.min.js"></script>-->
+<script src="./rxjs.umd.min.js"></script>
+<script>
+    const { Observable } = rxjs;
+
+    function checkInviteCodeApi(params) {
+        return new Observable(ob => {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState === 4) {
+                    if (xmlhttp.status === 200) {
+                        ob.next(JSON.parse(xmlhttp.responseText))
+                    } else {
+                        ob.error("http status code " + xmlhttp.status)
+                    }
+                    ob.complete()
+                }
+            };
+            xmlhttp.open("POST", "/checkInviteCode", true);
+            xmlhttp.setRequestHeader("Content-type", "application/json");
+            xmlhttp.send(JSON.stringify(params));
+        })
+    }
+
+    function validInviteCode(event) {
+        event.preventDefault();
+        var form = event.target; // Get a reference to the form
+        var elements = form.elements; // Get a collection of all form fields
+        var params = {}
+        // Loop through the form fields and get their values
+        for (var i = 0; i < elements.length; i++) {
+            var field = elements[i];
+            console.log(field, field.name)
+            if (field.type !== "submit") {
+                console.log(field.name + "\:" + field.value);
+                params[field.name] = field.value
+            }
+        }
+        checkInviteCodeApi(params).subscribe(data => {
+            if (data.ok == 1) {
+                alert("欢迎光临！");
+                const url_string = window.location.href;
+                const url = new URL(url_string);
+                const index = url.searchParams.get("index");
+                if (index == null) {
+                    location.reload();
+                } else {
+                    window.location.replace("/"+index);
+                }
+            } else {
+                alert("邀请码无效！");
+            }
+        }, err => {
+            console.error(err);
+            alert(err);
+        })
+    }
+</script>
+</head>
+
+<body class=login>
+    <div class=content style=margin-top:240px!important>
+        <form class=login-form onsubmit="validInviteCode(event)">
+            <h3 class=form-title>请输入邀请码</h3>
+            <div class=form-group>
+                <label class="control-label visible-ie8 visible-ie9 sf-hidden">邀请码</label>
+                <input class="form-control form-control-solid placeholder-no-fix" type=text autocomplete=off
+                    placeholder=邀请码 name=inviteCode value>
+            </div>
+            <div class=form-actions>
+                <button type=submit class="btn btn-success uppercase">确认</button>
+            </div>
+        </form>
+    </div>
+    <div class=copyright>
+        书山有路勤为径,学海无涯苦作舟
+    </div>
+</body>

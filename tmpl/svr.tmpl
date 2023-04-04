@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{.}}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        #app {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        iframe {
+            border: 0;
+            height: 100%;
+        }
+    </style>
+    <script>
+        function myMouseMoveFucn() {
+            console.log('flash')
+            document.cookie = "my-service={{.}}";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <iframe src="/" width="100%" height="500px" onmousemove="myMouseMoveFucn()" onmouseenter="myMouseMoveFucn()"
+            onmouseover="myMouseMoveFucn()"></iframe>
+    </div>
+</body>
+
+</html>

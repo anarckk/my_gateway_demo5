@@ -1,0 +1,11 @@
+port: 8083
+tls:
+  crt-file: "config/localhost.crt"
+  key-file: "config/localhost.key"
+reverse-proxies:
+  - name: "svr-gogs"
+    address: "https://192.168.1.1"
+  - name: "svr-static"
+    address: "https://192.168.1.1:20080"
+redis:
+  address: 192.168.1.1:20201
