@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"crypto/tls"
 	"encoding/json"
 	"flag"
 	"fmt"
@@ -41,6 +42,9 @@ func main() {
 		_svr := svr
 		svrURL, _ := url.Parse(_svr.Address)
 		svrProxy := httputil.NewSingleHostReverseProxy(svrURL)
+		svrProxy.Transport = &http.Transport{
+			TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+		}
 		svrProxy.ModifyResponse = func(r *http.Response) error {
 			r.Header.Del("X-Frame-Options")
 			r.Header.Add("X-Frame-Options", "SAMEORIGIN")
