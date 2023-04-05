@@ -99,6 +99,9 @@ func main() {
 			}
 			w.Header().Add("Set-Cookie", ck.String())
 			w.Header().Add("X-Frame-Options", "deny")
+			w.Header().Add("Cache-Control", "no-cache")
+			w.Header().Add("Pragma", "no-cache")
+			w.Header().Add("Expires", "0")
 			// 解析指定文件生成模板对象
 			// 关于模板渲染 https://zhuanlan.zhihu.com/p/299048675
 			tmpl, err := template.ParseFiles("tmpl/svr.tmpl")
